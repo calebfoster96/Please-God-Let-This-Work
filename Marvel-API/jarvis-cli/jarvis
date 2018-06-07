@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+var program = require('commander')
+var Marvel = require('./avengers')
+
+program
+  .version('0.1.0')
+  .option('-go, --getAvengers', 'Get Avengers')
+  .option('-gs, --getSpiderman', 'Get Spiderman')
+  .parse(process.argv);
+
+if (program.getSpiderman) {
+  var spiderman = new Avengers({
+   publicKey : '16079737dd34c675d0d9b2231d7acd66',
+   privateKey : '5c5a72764978f0511c51932744c08244e1e6c1a9'
+  })
+
+spiderman.getSpiderman()
+}
+
+if (program.getAvengers){
+  var marvel = new Avengers({
+   publicKey : '16079737dd34c675d0d9b2231d7acd66',
+   privateKey : '5c5a72764978f0511c51932744c08244e1e6c1a9'
+
+  })
+  avengers.assemble(function(avengers) {
+    console.log(avengers)
+  })
+}

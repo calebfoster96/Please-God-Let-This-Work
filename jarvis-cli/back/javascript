@@ -1,0 +1,13 @@
+var bmw = 'bmw 5Series'
+var audi = 'audi a8'
+var dodge = 'dodge challenger'
+
+
+var cars = ['bmw','audi','dodge']
+
+
+for (var x=0; x<cars.length; x++) {
+  if(cars[x] == 'bmw') {
+  console.log(bmw)
+ }
+}
